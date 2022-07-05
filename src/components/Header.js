@@ -33,7 +33,7 @@ function Header() {
         <p>{pString}</p>
       </div>
       <a href="#About">
-        <img id="scroll" src="/resources/images/scrollIcon.jpg"></img>
+        <img id="scroll" src="./resources/images/scrollIcon.jpg"></img>
       </a>
     </StyledHeader>
   );

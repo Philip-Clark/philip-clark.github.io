@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledAbout = styled.section`
   background-color: ${({ theme }) => theme.colors.background_dark};
   color: white;
-  padding: 0rem;
   margin: 0;
 
   text-align: left;
@@ -29,5 +28,9 @@ export const StyledAbout = styled.section`
     top: 103vh;
     left: -5rem;
     border-radius: 500rem;
+  }
+
+  @media (min-width: 600px) {
+    padding: 20rem 40rem;
   }
 `;

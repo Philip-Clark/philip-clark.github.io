@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledProject = styled.section`
   background-color: ${({ theme }) => theme.colors.background_light};
   color: white;
-  padding: 0rem;
   margin: 0;
 
   text-align: left;
@@ -38,5 +37,13 @@ export const StyledProject = styled.section`
   img {
     width: calc(100vw - 6rem);
     margin-bottom: 3rem;
+  }
+
+  @media (min-width: 600px) {
+    padding: 20rem 40rem;
+  }
+
+  #button {
+    width: calc(100vw - 82rem);
   }
 `;

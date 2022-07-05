@@ -40,10 +40,10 @@ export const StyledProject = styled.section`
   }
 
   @media (min-width: 600px) {
-    padding: 20rem 40rem;
+    padding: 40rem 20vw;
   }
 
   #button {
-    width: calc(100vw - 82rem);
+    width: calc(60vw);
   }
 `;

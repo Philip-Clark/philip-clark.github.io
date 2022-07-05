@@ -31,6 +31,6 @@ export const StyledAbout = styled.section`
   }
 
   @media (min-width: 600px) {
-    padding: 20rem 40rem;
+    padding: 40rem 20vw;
   }
 `;

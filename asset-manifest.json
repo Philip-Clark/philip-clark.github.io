@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/PhilipClarkPorfolio/static/css/main.33a83152.css",
-    "main.js": "/PhilipClarkPorfolio/static/js/main.8c9c3c6e.js",
+    "main.js": "/PhilipClarkPorfolio/static/js/main.df5985f1.js",
     "static/js/787.f974c701.chunk.js": "/PhilipClarkPorfolio/static/js/787.f974c701.chunk.js",
     "index.html": "/PhilipClarkPorfolio/index.html",
     "main.33a83152.css.map": "/PhilipClarkPorfolio/static/css/main.33a83152.css.map",
-    "main.8c9c3c6e.js.map": "/PhilipClarkPorfolio/static/js/main.8c9c3c6e.js.map",
+    "main.df5985f1.js.map": "/PhilipClarkPorfolio/static/js/main.df5985f1.js.map",
     "787.f974c701.chunk.js.map": "/PhilipClarkPorfolio/static/js/787.f974c701.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.33a83152.css",
-    "static/js/main.8c9c3c6e.js"
+    "static/js/main.df5985f1.js"
   ]
 }

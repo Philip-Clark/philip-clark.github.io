@@ -6,7 +6,7 @@ function ProjectTile(props) {
       <div id="aboveCircle">
         <img
           src={`${process.env.PUBLIC_URL}/images/${props.img}`}
-          alt="Image showing a project made by Philip Clark"
+          alt="A project made by Philip Clark"
           width="300px"
           height="auto"
         ></img>
@@ -17,7 +17,9 @@ function ProjectTile(props) {
           </h1>
           <h2>{props.subtitle}</h2>
           <p>{props.paragraph}</p>
-          <a id="button">View Project</a>
+          <a href="/" id="button">
+            View Project
+          </a>
         </div>
       </div>
     </StyledProjectTile>

@@ -57,12 +57,14 @@ export const StyledContact = styled.section`
       background-color: ${({ theme }) => theme.colors.secondary};
       border-radius: 0.3125rem;
       margin-top: 2rem;
+
       border: none;
       h2 {
         font-weight: 400;
+        color: ${({ theme }) => theme.colors.background_light};
       }
       &:hover {
-        transform: scale(1.01, 1.1);
+        transform: scale(1.05);
       }
       &:active {
         transform: scale(0.9, 0.9);
@@ -89,7 +91,7 @@ export const StyledContact = styled.section`
     margin-top: 4rem;
 
     display: grid;
-    grid-template-columns: calc(100vw -6rem);
+    grid-template-columns: calc(100vw - 6rem);
     gap: 1rem;
 
     @media (min-width: 1024px) {

@@ -6,11 +6,11 @@ function SkillTile(props) {
       <img
         src={`${process.env.PUBLIC_URL}/images/${props.img}`}
         alt={`${props.title} Icon`}
-        width="300px"
+        width="auto"
         height="auto"
       ></img>
       <h1>{props.title}</h1>
-      <h2>{props.subtitle}</h2>
+      {/* <h3>{props.subtitle}</h3> */}
       <p>{props.skills}</p>
     </StyledSkillTile>
   );

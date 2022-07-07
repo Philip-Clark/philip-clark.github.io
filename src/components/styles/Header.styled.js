@@ -17,6 +17,7 @@ export const StyledHeader = styled.section`
   }
 
   #decorative {
+    user-select: none;
     position: absolute;
     bottom: 0;
     margin: 0;
@@ -68,7 +69,7 @@ export const StyledHeader = styled.section`
           background-color: ${({ theme }) => theme.colors.secondary};
         }
         #thirdSwatch {
-          background-color: ${({ theme }) => theme.colors.basic};
+          background-color: ${({ theme }) => theme.colors.third};
         }
       }
     }

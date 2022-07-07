@@ -1,9 +1,6 @@
 import { StyledContact } from './styles/Contact.styled';
-import SkillTile from './SkillTile';
 import emailService from '../emailService';
 import emailjs from 'emailjs-com';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { click } from '@testing-library/user-event/dist/click';
 import ContactTile from './ContactTile';
 
 function Contact() {

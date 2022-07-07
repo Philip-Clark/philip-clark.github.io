@@ -42,6 +42,7 @@ export const StyledProjectTile = styled.section`
     width: calc(100vw - 8rem);
     /* 6 from the body and 2 from self = 8rem */
     text-align: center;
+    text-decoration: none;
     padding: 1rem;
     background-color: ${({ theme }) => theme.colors.primary};
   }

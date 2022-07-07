@@ -24,7 +24,7 @@ function Header() {
           </div>
           <div className="colorSwatch">
             <div id="thirdSwatch" className="swatch" />
-            <p>{theme.colors.basic}</p>
+            <p>{theme.colors.third}</p>
           </div>
         </div>
         <h1>{h1String}</h1>

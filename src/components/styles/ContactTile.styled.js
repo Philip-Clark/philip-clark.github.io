@@ -9,7 +9,10 @@ export const StyledContactTile = styled.section`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+  transition: transform 0.1s ease-out;
+  &:hover {
+    transform: translateY(-1rem);
+  }
   h2 {
     color: ${({ theme }) => theme.colors.secondary};
     font-weight: 400;

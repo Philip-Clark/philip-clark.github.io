@@ -4,10 +4,29 @@ const GlobalStyles = createGlobalStyle`
 *{
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  transition: all 1s ease-in-out;
+}
+img, figure{
+  -webkit-user-drag: none;
+
+}
+
+*::selection{
+  background-color: ${({ theme }) => theme.colors.third};
+  color:${({ theme }) => theme.colors.secondary}
 }
 
 #root, body{
   overflow-x: hidden;
+}
+
+#svgWrapper{
+  position: absolute;
+  top: 28rem;
+  margin-left:4vw;
+  svg{
+    width: 96vw;
+  }
 }
 
 h1{

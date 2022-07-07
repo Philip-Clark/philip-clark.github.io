@@ -17,9 +17,11 @@ export const StyledAbout = styled.section`
     margin: 0;
     font-size: 4rem;
     letter-spacing: 0.03rem;
+    color: ${({ theme }) => theme.colors.secondary};
   }
   h2 {
     font-size: 2rem;
+    color: ${({ theme }) => theme.colors.secondary};
   }
 
   p {

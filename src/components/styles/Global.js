@@ -25,7 +25,11 @@ p{
   font-weight: 100;
   line-height: 150%;
   letter-spacing: 0.1rem;
+  color: ${({ theme }) => theme.colors.basic};
+  
 }
+
+
 `;
 
 export default GlobalStyles;

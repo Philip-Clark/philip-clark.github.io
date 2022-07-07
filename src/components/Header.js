@@ -12,7 +12,6 @@ function Header() {
         <h1>PHILIP CLARK</h1>
         <p>WEB DEVELOPER</p>
       </div>
-      <h3 id="decorative">HEADER</h3>
       <div id="designRules">
         <div id="colorSwatches">
           <div className="colorSwatch">
@@ -32,8 +31,15 @@ function Header() {
         <h2>{h2String}</h2>
         <p>{pString}</p>
       </div>
+      <h3 id="decorative">HEADER</h3>
       <a href="#About">
-        <img id="scroll" src="./resources/images/scrollIcon.jpg"></img>
+        <img
+          id="scroll"
+          src={process.env.PUBLIC_URL + '/images/scrollIcon.AVIF'}
+          width="30px"
+          height="auto"
+          alt="Scroll down Icon"
+        ></img>
       </a>
     </StyledHeader>
   );

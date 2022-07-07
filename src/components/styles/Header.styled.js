@@ -10,6 +10,7 @@ export const StyledHeader = styled.section`
   #nameAndTitle {
     padding-top: 35vh;
     line-height: 0.2rem;
+
     p {
       letter-spacing: 0.4rem;
     }

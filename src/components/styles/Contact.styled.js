@@ -17,6 +17,20 @@ export const StyledContact = styled.section`
   #subtitle {
     max-width: 25rem;
   }
+  #buttonGroup {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media (min-width: 1024px) {
+      flex-direction: row-reverse;
+
+      p {
+        flex-grow: 1;
+        margin: 0.5rem 0 0 1rem;
+      }
+    }
+  }
 
   form {
     margin-top: 4rem;
@@ -56,7 +70,6 @@ export const StyledContact = styled.section`
       transition: transform 0.05s ease-in-out;
       background-color: ${({ theme }) => theme.colors.secondary};
       border-radius: 0.3125rem;
-      margin-top: 2rem;
 
       border: none;
       h2 {
@@ -91,7 +104,7 @@ export const StyledContact = styled.section`
     margin-top: 4rem;
 
     display: grid;
-    grid-template-columns: calc(100vw - 6rem);
+    /* grid-template-columns: calc(100vw - 6rem); */
     gap: 1rem;
 
     @media (min-width: 1024px) {

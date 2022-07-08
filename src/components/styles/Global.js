@@ -4,7 +4,8 @@ const GlobalStyles = createGlobalStyle`
 *{
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
-  transition: all 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+  transition: color 1s ease-in-out;
 }
 img, figure{
   -webkit-user-drag: none;

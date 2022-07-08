@@ -41,10 +41,12 @@ function Contact() {
         <input type="email" name="email" id="email" required placeholder="email address" />
         <textarea type="text" name="message" id="message" required placeholder="message" />
 
-        <button type="submit" id="button" value="Send Email">
-          <h2>Send Email</h2>
-        </button>
-        <p id="confirmation"></p>
+        <div id="buttonGroup">
+          <button type="submit" id="button" value="Send Email">
+            <h2>Send Email</h2>
+          </button>
+          <p id="confirmation"></p>
+        </div>
       </form>
 
       <div id="contactTilesGrid">

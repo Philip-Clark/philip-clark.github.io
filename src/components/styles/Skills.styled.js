@@ -11,7 +11,7 @@ export const StyledSkills = styled.section`
   #skillsList {
     display: grid;
     min-width: min-content;
-    grid-template-columns: calc(100vw - 6rem);
+    /* grid-template-columns: calc(100vw - 6rem); */
     padding: 0 3rem;
     margin-bottom: 10rem;
     gap: 1rem;

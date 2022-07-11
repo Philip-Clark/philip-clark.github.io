@@ -88,4 +88,15 @@ export const StyledProjectTile = styled.section`
       padding: 1rem 3rem;
     }
   }
+
+  [data-aos='ProjectZoom'].aos-animate {
+    animation: ProjectZoom 0.5s ease 2s forwards;
+  }
+
+  @keyframes ProjectZoom {
+    to {
+      transform: scale(1);
+      opacity: 100%;
+    }
+  }
 `;

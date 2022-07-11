@@ -11,9 +11,7 @@ export const StyledSkillTile = styled.section`
   align-items: center;
   justify-content: space-between;
   transition: transform 0.1s ease-out;
-  &:hover {
-    transform: translateY(-1rem);
-  }
+
   h1 {
     justify-self: center;
     font-size: 1.5rem;
@@ -54,6 +52,9 @@ export const StyledSkillTile = styled.section`
     padding: 2rem 10vw;
   }
   @media (min-width: 1024px) {
+    &:hover {
+      transform: translateY(-1rem);
+    }
     padding: 2rem 2rem;
   }
 `;

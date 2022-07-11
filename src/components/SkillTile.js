@@ -1,8 +1,9 @@
 import { StyledSkillTile } from './styles/SkillTile.styled';
+import 'aos/dist/aos.css';
 
 function SkillTile(props) {
   return (
-    <StyledSkillTile>
+    <StyledSkillTile data-aos="TileUp" id="TileUp">
       <img
         src={`${process.env.PUBLIC_URL}/images/${props.img}`}
         alt={`${props.title} Icon`}

@@ -1,0 +1,16 @@
+@keyframes in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+[data-aos='a'] {
+  opacity: 0%;
+}
+
+[data-aos='a'].aos-animate {
+  opacity: 100%;
+}

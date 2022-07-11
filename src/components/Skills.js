@@ -1,5 +1,6 @@
 import { StyledSkills } from './styles/Skills.styled';
 import SkillTile from './SkillTile';
+import 'aos/dist/aos.css';
 
 function Skills() {
   return (
@@ -7,22 +8,25 @@ function Skills() {
       <img id="decorativeText" alt="" src={`${process.env.PUBLIC_URL}/images/Fullstack.svg`} />
       <div id="aboveCircle">
         <section id="softSkills">
-          <h1>
-            <figure id="circle" />
-            Soft Skills
-          </h1>
-          <p>
-            I am a junior full-stack developer. I live out in the country about an hour south of
-            Louisville Kentucky. It was here that my brother taught me python and my love for
-            programming began. Now six years of programming later, I have an associate's in computer
-            programming and I am pursuing a career in full-stack development. Even though I have
-            always meddled in web development, only in the last two years has it been my focus.
-            Before that, I developed mobile and pc games with my other brother (I have an awesome
-            family!). Since turning my focus to web development, I have developed a love for the
-            entire web stack, frontend, and backend, and love to create beautiful and functional
-            websites and web apps.
+          <div className="mask">
+            <h1 data-aos="in">Soft Skills</h1>
+          </div>
+          <figure id="circle" data-aos="circle" />
+
+          <p data-aos="inDelayed">
+            I have excellent communication with professional formatting, concise wording and timely
+            responses. Following instructions and respecting authority are ingrained in my
+            character. I can lead a group and explain abstract and difficult concepts in an
+            understandable way. Being a team player is one of my highly valued traits, and I strive
+            to help others when I can. I love to learn and constantly look for better ways to do my
+            work, but I understand that some things need to stay consistent. I love teaching others
+            new things and helping people understand technologies.
           </p>
-          <h1 id="hardSkills">Technical Skills</h1>
+          <div className="mask">
+            <h1 data-aos="in" id="hardSkills">
+              Technical Skills
+            </h1>
+          </div>
         </section>
       </div>
 

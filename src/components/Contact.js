@@ -2,15 +2,20 @@ import { StyledContact } from './styles/Contact.styled';
 import emailService from '../emailService';
 import emailjs from 'emailjs-com';
 import ContactTile from './ContactTile';
+import 'aos/dist/aos.css';
 
 function Contact() {
   return (
     <StyledContact>
-      <h1>Contact Form</h1>
-      <h2 id="subtitle">
-        Wanna talk? Fill out the form with your email address and message, I’ll try to get back to
-        you.
-      </h2>
+      <div className="mask">
+        <h1 data-aos="in">Contact Form</h1>
+      </div>
+      <div className="mask">
+        <h2 id="subtitle" data-aos="in">
+          Wanna talk? Fill out the form with your email address and message, I’ll try to get back to
+          you.
+        </h2>
+      </div>
       <form
         id="form"
         onSubmit={(event) => {
@@ -38,12 +43,28 @@ function Contact() {
             );
         }}
       >
-        <input type="email" name="email" id="email" required placeholder="email address" />
-        <textarea type="text" name="message" id="message" required placeholder="message" />
+        <input
+          data-aos="fade-left"
+          data-aos-delay="1000"
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="email address"
+        />
+        <textarea
+          type="text"
+          data-aos-delay="1000"
+          data-aos="fade-left"
+          name="message"
+          id="message"
+          required
+          placeholder="message"
+        />
 
-        <div id="buttonGroup">
+        <div id="buttonGroup" data-aos="fade-left" data-aos-delay="1000">
           <button type="submit" id="button" value="Send Email">
-            <h2>Send Email</h2>
+            <h3>Send Email</h3>
           </button>
           <p id="confirmation"></p>
         </div>
@@ -59,9 +80,9 @@ function Contact() {
 
         <ContactTile
           img="indeed.svg"
-          h2="Hire Me on Indeed!"
-          para="If your interested in working with me, feel free to check out my Indeed profile!"
-          link="https://indeed.com/"
+          h2="View My Resume on Indeed!"
+          para="If your interested in working with me, feel free to check out my Indeed resume!"
+          link="https://my.indeed.com/p/pr0sv1r"
         />
 
         <ContactTile

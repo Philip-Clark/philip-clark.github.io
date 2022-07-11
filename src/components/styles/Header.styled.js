@@ -7,12 +7,49 @@ export const StyledHeader = styled.section`
   height: 100vh;
   text-align: center;
 
+  /* .mask {
+    overflow: hidden;
+    margin: 0 auto 0.1rem;
+    width: fit-content;
+  } */
+
   #nameAndTitle {
     padding-top: 35vh;
-    line-height: 0.2rem;
+    width: 90vw;
+
+    transform: translateX(-50%);
+    position: absolute;
+
+    #title {
+      height: 2rem;
+
+      h1 {
+        margin: 0;
+        transform: translate(0, 100%);
+        animation: textin 0.5s ease 1.2s forwards;
+      }
+
+      #subtitle {
+        height: 1rem;
+      }
+    }
+
+    #titleBlock {
+      display: block;
+      margin: 0.25rem auto;
+      width: 0rem;
+      animation: boxScale 2s 0.5s ease-in-out forwards;
+      height: 0.3rem;
+      background-color: ${({ theme }) => theme.colors.secondary};
+      /* border-bottom: solid 0.1rem ${({ theme }) => theme.colors.primary}; */
+    }
 
     p {
+      transform: translate(0, -100%);
+      animation: textin 0.5s ease 1.2s forwards;
+
       letter-spacing: 0.4rem;
+      margin: 0;
     }
   }
 
@@ -94,6 +131,31 @@ export const StyledHeader = styled.section`
     }
     20% {
       transform: translate(-50%, 0px);
+    }
+  }
+
+  @keyframes textin {
+    to {
+      transform: translate(0%);
+    }
+  }
+
+  @keyframes boxScale {
+    0% {
+      width: 0rem;
+    }
+
+    40% {
+      width: 18rem;
+    }
+    50% {
+      width: 18rem;
+      opacity: 100%;
+    }
+
+    100% {
+      opacity: 00%;
+      width: 18rem;
     }
   }
 `;

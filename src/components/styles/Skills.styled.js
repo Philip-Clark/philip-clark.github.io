@@ -14,6 +14,7 @@ export const StyledSkills = styled.section`
     /* grid-template-columns: calc(100vw - 6rem); */
     padding: 0 3rem;
     margin-bottom: 10rem;
+    margin-top: 3rem;
     gap: 1rem;
 
     @media (min-width: 600px) {
@@ -49,19 +50,23 @@ export const StyledSkills = styled.section`
       padding: 0rem 20vw;
     }
   }
-
+  .mask {
+    overflow: hidden;
+    width: fit-content;
+  }
   #softSkills {
     padding: 8rem 3rem 0rem;
-    h1 {
-      color: ${({ theme }) => theme.colors.third};
-      line-height: 1rem;
-    }
+    h1,
     #hardSkills {
-      text-align: left;
-      margin-bottom: 3rem;
+      color: ${({ theme }) => theme.colors.third};
+      line-height: 2rem;
+      margin: 0;
+      margin-bottom: 0;
+      transform: translate(0%, 110%);
     }
     p {
       margin-bottom: 15rem;
+      opacity: 0%;
     }
     @media (min-width: 600px) {
       padding: 8rem 20vw 0rem;
@@ -79,8 +84,65 @@ export const StyledSkills = styled.section`
     max-width: 90vw;
     max-height: 90vw;
     height: 35rem;
-    transform: translate(-20%, -50%);
     z-index: -1;
     border-radius: 500rem;
+    transform: scale(0);
+  }
+
+  #TileUp {
+    opacity: 0%;
+    transform: translate(50%, 0%);
+  }
+
+  @keyframes circleIn {
+    from {
+      transform: translate(-60%, -40%) scale(0);
+    }
+    to {
+      transform: translate(-20%, -50%) scale(1);
+    }
+  }
+
+  [data-aos='in'].aos-animate {
+    animation: in 0.5s ease 0.5s forwards;
+  }
+
+  [data-aos='inDelayed'].aos-animate {
+    animation: in 0.5s ease 1s forwards;
+  }
+
+  [data-aos='circle'].aos-animate {
+    animation: circleIn 1s ease 0.2s forwards;
+  }
+
+  [data-aos='TileUp'].aos-animate {
+    animation: TileUp 0.5s ease forwards;
+  }
+
+  [data-aos='TileUp'].aos-animate:nth-of-type(1) {
+    animation-delay: 0.8s;
+  }
+  [data-aos='TileUp'].aos-animate:nth-of-type(2) {
+    animation-delay: 0.9s;
+  }
+  [data-aos='TileUp'].aos-animate:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+
+  @keyframes TileUp {
+    to {
+      opacity: 100%;
+      transform: translate(0%, 0%);
+    }
+  }
+
+  @keyframes in {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      transform: translate(0%, 0%);
+    }
   }
 `;

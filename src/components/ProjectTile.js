@@ -1,4 +1,5 @@
 import { StyledProjectTile } from './styles/ProjectTile.styled';
+import 'aos/dist/aos.css';
 
 function ProjectTile(props) {
   return (
@@ -11,13 +12,24 @@ function ProjectTile(props) {
           height="auto"
         ></img>
         <div id="text">
-          <h1>
+          <h1 data-aos="fade-up" data-aos-delay="300">
             {props.title}
-            <figure id="circle" />
+            <figure id="circle" data-aos="zoom-out" data-aos-delay="800" />
           </h1>
-          <h2>{props.subtitle}</h2>
-          <p>{props.paragraph}</p>
-          <a href="/" id="button">
+          <h2 data-aos="fade-up" data-aos-delay="500">
+            {props.subtitle}
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="600">
+            {props.paragraph}
+          </p>
+          <a
+            target="_blank"
+            referrerPolicy="no-referrer"
+            href={props.link}
+            id="button"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
             View Project
           </a>
         </div>

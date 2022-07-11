@@ -14,6 +14,7 @@ export const StyledContactTile = styled.section`
     transform: translateY(-1rem);
   }
   h2 {
+    margin-top: 2.5rem;
     color: ${({ theme }) => theme.colors.secondary};
     font-weight: 400;
   }

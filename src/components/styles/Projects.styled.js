@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import 'aos/dist/aos.css';
 
 export const StyledProjects = styled.section`
   background-color: ${({ theme }) => theme.colors.background_light};

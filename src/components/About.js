@@ -1,16 +1,19 @@
 import { StyledAbout } from './styles/About.styled';
-
 function About() {
   return (
     <StyledAbout id="About">
       <div id="aboveCircle">
-        <h1>
-          Hello
-          <figure id="circle" />
-        </h1>
+        <div className="mask">
+          <h1 data-aos="in">Hello</h1>
+        </div>
+        <figure id="circle" data-aos="circle" />
 
-        <h2 id="name">my name is Philip</h2>
-        <p>
+        <div className="mask">
+          <h2 data-aos="in" id="name">
+            my name is Philip
+          </h2>
+        </div>
+        <p data-aos="inDelayed">
           I am a junior full-stack developer. I live out in the country about an hour south of
           Louisville Kentucky. It was here that my brother taught me python and my love for
           programming began. Now six years of programming later, I have an associate's in computer

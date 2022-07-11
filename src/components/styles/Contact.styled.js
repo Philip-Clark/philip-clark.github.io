@@ -7,11 +7,13 @@ export const StyledContact = styled.section`
   h1 {
     margin: 0;
     color: ${({ theme }) => theme.colors.secondary};
+    transform: translate(0%, 150%);
   }
 
   h2 {
     color: ${({ theme }) => theme.colors.basic};
     font-weight: 100;
+    transform: translate(0%, -150%);
   }
 
   #subtitle {
@@ -30,6 +32,11 @@ export const StyledContact = styled.section`
         margin: 0.5rem 0 0 1rem;
       }
     }
+  }
+
+  .mask {
+    overflow: hidden;
+    width: fit-content;
   }
 
   form {
@@ -72,7 +79,7 @@ export const StyledContact = styled.section`
       border-radius: 0.3125rem;
 
       border: none;
-      h2 {
+      h3 {
         font-weight: 400;
         color: ${({ theme }) => theme.colors.background_light};
       }
@@ -135,6 +142,47 @@ export const StyledContact = styled.section`
     padding: 15rem 20vw;
     form {
       width: calc(60vw);
+    }
+  }
+
+  [data-aos='in'].aos-animate {
+    animation: in 0.5s ease 0.5s forwards;
+  }
+
+  [data-aos='inDelayed'].aos-animate {
+    animation: in 0.5s ease 1s forwards;
+  }
+
+  @keyframes in {
+    to {
+      opacity: 100%;
+      transform: translate(0%, 0%);
+    }
+  }
+
+  #TileUp {
+    transform: translate(50%, 0%);
+    opacity: 0%;
+  }
+
+  [data-aos='TileUp'].aos-animate {
+    animation: TileUp 0.5s ease forwards;
+  }
+
+  [data-aos='TileUp'].aos-animate:nth-of-type(1) {
+    animation-delay: 0.8s;
+  }
+  [data-aos='TileUp'].aos-animate:nth-of-type(2) {
+    animation-delay: 0.9s;
+  }
+  [data-aos='TileUp'].aos-animate:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+
+  @keyframes TileUp {
+    to {
+      opacity: 100%;
+      transform: translate(0%, 0%);
     }
   }
 `;

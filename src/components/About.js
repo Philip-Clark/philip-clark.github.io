@@ -1,7 +1,7 @@
 import { StyledAbout } from './styles/About.styled';
 function About() {
   return (
-    <StyledAbout id="About">
+    <StyledAbout id="About" className="snap">
       <div id="aboveCircle">
         <div className="mask">
           <h1 data-aos="in">Hello</h1>

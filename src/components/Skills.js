@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 
 function Skills() {
   return (
-    <StyledSkills>
+    <StyledSkills id="Skills" className="snap">
       <img id="decorativeText" alt="" src={`${process.env.PUBLIC_URL}/images/Fullstack.svg`} />
       <div id="aboveCircle">
         <section id="softSkills">

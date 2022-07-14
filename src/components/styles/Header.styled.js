@@ -22,15 +22,21 @@ export const StyledHeader = styled.section`
 
     #title {
       height: 2rem;
+      opacity: 0;
 
       h1 {
         margin: 0;
         transform: translate(0, 100%);
         animation: textin 0.5s ease 1.2s forwards;
       }
+      #line {
+        transform: scale(0, 0);
+        opacity: 0;
+      }
 
       #subtitle {
         height: 1rem;
+        opacity: 0;
       }
     }
 

@@ -46,7 +46,7 @@ function Header() {
   }, []);
 
   return (
-    <StyledHeader>
+    <StyledHeader id="header" className="snap">
       <svg
         id="nameAndTitle"
         width="398"
@@ -56,7 +56,6 @@ function Header() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>Philip Clark</title>
-        <text>Philip Clark. Web Developer</text>
         <g id="Frame 1">
           <path
             alt="Philip Clark"

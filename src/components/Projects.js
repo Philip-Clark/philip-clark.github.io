@@ -4,8 +4,8 @@ import 'aos/dist/aos.css';
 
 function Projects(props) {
   return (
-    <StyledProjects>
-      <div className="Project" data-aos="fade-right" data-aos-delay="200" data-aos-offset="500">
+    <StyledProjects id="Projects" className="snap">
+      <div className="Project snap" data-aos="fade-in" data-aos-delay="200" data-aos-offset="500">
         <ProjectTile
           img="project1.AVIF"
           title="Elliot’s Coffee"
@@ -14,7 +14,7 @@ function Projects(props) {
           link="https://github.com/Philip-Clark/Elliots_Coffee_Shop"
         />
       </div>
-      <div className="Project" data-aos="fade-left" data-aos-offset="500">
+      <div className="Project snap" data-aos="fade-int" data-aos-offset="500">
         <ProjectTile
           img="project2.AVIF"
           title="Personal Project"

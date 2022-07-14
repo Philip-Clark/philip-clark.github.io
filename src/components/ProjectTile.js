@@ -12,14 +12,14 @@ function ProjectTile(props) {
           height="auto"
         ></img>
         <div id="text">
-          <h1 data-aos="fade-up" data-aos-delay="300">
+          <h1 data-aos="fade-up" data-aos-delay="500">
             {props.title}
-            <figure id="circle" data-aos="zoom-out" data-aos-delay="800" />
           </h1>
-          <h2 data-aos="fade-up" data-aos-delay="500">
+          <figure id="circle" data-aos="circle" data-aos-delay="400" />
+          <h2 data-aos="fade-up" data-aos-delay="600">
             {props.subtitle}
           </h2>
-          <p data-aos="fade-up" data-aos-delay="600">
+          <p data-aos="fade-up" data-aos-delay="700">
             {props.paragraph}
           </p>
           <a
@@ -28,7 +28,7 @@ function ProjectTile(props) {
             href={props.link}
             id="button"
             data-aos="fade-up"
-            data-aos-delay="700"
+            data-aos-delay="800"
           >
             View Project
           </a>

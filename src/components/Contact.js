@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 function Contact() {
   return (
-    <StyledContact>
+    <StyledContact id="Contact" className="snap">
       <div className="mask">
         <h1 data-aos="in">Contact Form</h1>
       </div>

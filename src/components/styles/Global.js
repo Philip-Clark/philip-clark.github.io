@@ -17,6 +17,7 @@ img, figure{
   color:${({ theme }) => theme.colors.secondary}
 }
 
+
 #root, body{
   overflow-x: hidden;
 }

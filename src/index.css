@@ -9,3 +9,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-snap-type: y proximity;
+}
+/* 
+.snap {
+  scroll-snap-align: center;
+} */

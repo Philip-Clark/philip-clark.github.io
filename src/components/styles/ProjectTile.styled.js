@@ -20,7 +20,7 @@ export const StyledProjectTile = styled.section`
     max-width: 90vw;
     max-height: 90vw;
     height: 35rem;
-    transform: translate(10%, -60%);
+    transform: translate(10%, -60%) scale(0);
     z-index: -1;
     border-radius: 500rem;
   }
@@ -89,14 +89,15 @@ export const StyledProjectTile = styled.section`
     }
   }
 
-  [data-aos='ProjectZoom'].aos-animate {
-    animation: ProjectZoom 0.5s ease 2s forwards;
-  }
-
-  @keyframes ProjectZoom {
-    to {
-      transform: scale(1);
-      opacity: 100%;
+  @keyframes circleIn {
+    from {
+      transform: translate(10%, -60%) scale(0);
     }
+    to {
+      transform: translate(10%, -60%) scale(1);
+    }
+  }
+  [data-aos='circle'].aos-animate {
+    animation: circleIn 1s ease 0.2s forwards;
   }
 `;

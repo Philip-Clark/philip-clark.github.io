@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledCurve = styled.div`
-  position: absolute;
   top: 0;
   left: 0;
-  display: none;
   opacity: 0;
+  display: none;
   overflow: visible;
+  position: absolute;
 
   svg {
     overflow: visible;
@@ -27,9 +27,9 @@ export const StyledCurve = styled.div`
   #circleSvgBlur1,
   #circleSvgBlur2,
   #circleSvgBlur3 {
-    stroke: ${({ theme }) => theme.colors.basic};
-    fill: ${({ theme }) => theme.colors.basic};
     filter: blur(1px);
+    fill: ${({ theme }) => theme.colors.basic};
+    stroke: ${({ theme }) => theme.colors.basic};
   }
 
   #circleSvgBlur1 {

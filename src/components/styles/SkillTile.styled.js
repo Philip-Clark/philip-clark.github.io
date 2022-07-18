@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 
 export const StyledSkillTile = styled.section`
-  background-color: ${({ theme }) => theme.colors.background_light};
-  border-radius: 1.5625rem;
-  text-align: center;
-  padding: 2rem 0.5rem;
-  line-height: 1.5rem;
   display: flex;
-  flex-direction: column;
+  text-align: center;
+  line-height: 1.5rem;
   align-items: center;
+  padding: 2rem 0.5rem;
+  flex-direction: column;
+  border-radius: 1.5625rem;
   justify-content: space-between;
+  background-color: ${({ theme }) => theme.colors.background_light};
   transition: transform 0.1s ease-out;
 
   h1 {
-    justify-self: center;
-    font-size: 1.5rem;
-    line-height: 1.25rem;
     width: 100%;
+    font-size: 1.5rem;
+    justify-self: center;
+    line-height: 1.25rem;
     color: ${({ theme }) => theme.colors.third};
+
     @media (max-width: 300px) {
       font-size: 8vw;
       letter-spacing: 0.01rem;
@@ -31,20 +32,19 @@ export const StyledSkillTile = styled.section`
 
   h3 {
     font-weight: 100;
-    font-size: 0.875rem;
     line-height: 1rem;
+    font-size: 0.875rem;
   }
   p {
     font-size: 1rem;
-    line-height: 1.25rem;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    line-height: 1.25rem;
   }
 
   img {
-    max-height: 8rem;
     max-width: 100%;
-
+    max-height: 8rem;
     margin-bottom: 0rem;
   }
 

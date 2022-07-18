@@ -1,37 +1,37 @@
 import styled from 'styled-components';
 
 export const StyledContactTile = styled.section`
-  background-color: ${({ theme }) => theme.colors.background_pale};
-  border-radius: 1.5rem;
-  padding: 2rem 0.5rem 3rem;
-  text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  text-align: center;
   align-items: center;
+  border-radius: 1.5rem;
+  flex-direction: column;
+  padding: 2rem 0.5rem 3rem;
+  justify-content: space-between;
+  background-color: ${({ theme }) => theme.colors.background_pale};
   transition: transform 0.1s ease-out;
   &:hover {
     transform: translateY(-1rem);
   }
   h2 {
+    font-weight: 400;
     margin-top: 2.5rem;
     color: ${({ theme }) => theme.colors.secondary};
-    font-weight: 400;
   }
   p {
+    flex-grow: 1;
     font-weight: 100;
     margin-bottom: 2rem;
-    flex-grow: 1;
   }
   a {
-    width: fit-content;
-    border-radius: 0.3rem;
-    padding: 0.5rem 3rem;
     margin: 0;
-    text-decoration: none;
     font-weight: 500;
-    background-color: ${({ theme }) => theme.colors.secondary};
+    width: fit-content;
+    padding: 0.5rem 3rem;
     color: ${({ theme }) => theme.colors.background_pale};
+    border-radius: 0.3rem;
+    text-decoration: none;
+    background-color: ${({ theme }) => theme.colors.secondary};
     transition: all 0.05s ease-in-out;
 
     &:hover {

@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 
 export const StyledSkills = styled.section`
-  background-color: ${({ theme }) => theme.colors.background_dark};
   margin: 0;
-  padding: 10rem 0rem;
   text-align: left;
-  line-height: 1.5rem;
   overflow-x: hidden;
+  padding: 10rem 0rem;
+  line-height: 1.5rem;
+  background-color: ${({ theme }) => theme.colors.background_dark};
 
   #skillsList {
-    display: grid;
-    min-width: min-content;
-    /* grid-template-columns: calc(100vw - 6rem); */
-    padding: 0 3rem;
-    margin-bottom: 10rem;
-    margin-top: 3rem;
     gap: 1rem;
+    display: grid;
+    padding: 0 3rem;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+    min-width: min-content;
 
     @media (min-width: 600px) {
       padding: 0rem 20vw;
@@ -32,15 +31,15 @@ export const StyledSkills = styled.section`
   }
 
   #decorativeText {
+    opacity: 20%;
     display: none;
-
+    filter: invert();
     user-select: none;
-    -webkit-user-drag: none;
     padding: 0rem 1rem;
     margin-bottom: 4rem;
+    -webkit-user-drag: none;
     width: calc(100vw - 2rem);
-    filter: invert();
-    opacity: 20%;
+
     @media (min-width: 1024px) {
       padding: 0rem 5vw;
       width: calc(90vw - 2rem);
@@ -58,10 +57,10 @@ export const StyledSkills = styled.section`
     padding: 8rem 3rem 0rem;
     h1,
     #hardSkills {
-      color: ${({ theme }) => theme.colors.third};
-      line-height: 2rem;
       margin: 0;
       margin-bottom: 0;
+      line-height: 2rem;
+      color: ${({ theme }) => theme.colors.third};
       transform: translate(0%, 110%);
     }
     p {
@@ -74,19 +73,19 @@ export const StyledSkills = styled.section`
   }
 
   #aboveCircle {
-    position: relative;
     z-index: 10;
+    position: relative;
   }
   #circle {
-    position: absolute;
-    background-color: rgb(46, 46, 46, 0.2);
+    z-index: -1;
     width: 35rem;
+    height: 35rem;
     max-width: 90vw;
     max-height: 90vw;
-    height: 35rem;
-    z-index: -1;
-    border-radius: 500rem;
+    position: absolute;
     transform: scale(0);
+    border-radius: 500rem;
+    background-color: rgb(46, 46, 46, 0.2);
   }
 
   #TileUp {

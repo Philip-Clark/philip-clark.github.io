@@ -75,7 +75,7 @@ function Header() {
         </g>
       </svg>
 
-      <div id="designRules">
+      <div id="designRules" className="fadesIn">
         <div id="colorSwatches">
           <div className="colorSwatch">
             <div id="firstSwatch" className="swatch" />
@@ -94,8 +94,10 @@ function Header() {
         <h2>{h2String}</h2>
         <p>{pString}</p>
       </div>
-      <h3 id="decorative">HEADER</h3>
-      <a href="#About">
+      <h3 id="decorative" className="fadesIn">
+        HEADER
+      </h3>
+      <a href="#About" className="fadesIn">
         <img
           id="scroll"
           src={process.env.PUBLIC_URL + '/images/scrollIcon.AVIF'}

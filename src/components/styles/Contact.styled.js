@@ -1,31 +1,30 @@
 import styled from 'styled-components';
 
 export const StyledContact = styled.section`
-  background-color: ${({ theme }) => theme.colors.background_light};
   margin: 0;
   padding: 15rem 3rem;
+  background-color: ${({ theme }) => theme.colors.background_light};
   h1 {
     margin: 0;
-    color: ${({ theme }) => theme.colors.secondary};
     transform: translate(0%, 150%);
+    color: ${({ theme }) => theme.colors.secondary};
   }
 
   h2 {
-    color: ${({ theme }) => theme.colors.basic};
     font-weight: 100;
+    color: ${({ theme }) => theme.colors.basic};
   }
 
   #subtitle {
     max-width: 25rem;
   }
   #buttonGroup {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
     @media (min-width: 1024px) {
       flex-direction: row-reverse;
-
       p {
         flex-grow: 1;
         margin: 0.5rem 0 0 1rem;
@@ -39,27 +38,27 @@ export const StyledContact = styled.section`
   }
 
   form {
-    margin-top: 4rem;
     display: flex;
+    margin-top: 4rem;
     flex-direction: column;
     width: calc(100vw - 7rem);
 
     label {
+      font-size: 1rem;
       margin-top: 1rem;
+      font-weight: 100;
       margin-left: 0.5rem;
       color: ${({ theme }) => theme.colors.basic};
-      font-size: 1rem;
-      font-weight: 100;
     }
 
     input,
     textarea {
-      padding: 0.5rem;
-      background-color: ${({ theme }) => theme.colors.background_pale};
-      border-radius: 0.3125rem;
       border: none;
       color: white;
+      padding: 0.5rem;
       margin-top: 1rem;
+      border-radius: 0.3125rem;
+      background-color: ${({ theme }) => theme.colors.background_pale};
       &:active,
       &:focus {
         border: 1px solid ${({ theme }) => theme.colors.secondary};
@@ -67,17 +66,15 @@ export const StyledContact = styled.section`
       }
     }
     textarea {
-      display: block;
       resize: none;
       height: 10rem;
+      display: block;
     }
-    /* color-scheme: dark; */
     button {
-      transition: transform 0.05s ease-in-out;
-      background-color: ${({ theme }) => theme.colors.secondary};
-      border-radius: 0.3125rem;
-
       border: none;
+      border-radius: 0.3125rem;
+      background-color: ${({ theme }) => theme.colors.secondary};
+      transition: transform 0.05s ease-in-out;
       h3 {
         font-weight: 400;
         color: ${({ theme }) => theme.colors.background_light};
@@ -100,18 +97,16 @@ export const StyledContact = styled.section`
     select:-webkit-autofill:hover,
     select:-webkit-autofill:focus {
       border: none;
+      transition: background-color 5000s ease-in-out 0s;
       -webkit-text-fill-color: ${({ theme }) => theme.colors.basic};
       -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.colors.background_pale} inset;
-      transition: background-color 5000s ease-in-out 0s;
     }
   }
 
   #contactTilesGrid {
-    margin-top: 4rem;
-
-    display: grid;
-    /* grid-template-columns: calc(100vw - 6rem); */
     gap: 1rem;
+    display: grid;
+    margin-top: 4rem;
 
     @media (min-width: 1024px) {
       grid-template-columns: calc(33.33% - 0.666rem) calc(33.33% - 0.666rem) calc(33.33% - 0.666rem);
@@ -127,8 +122,8 @@ export const StyledContact = styled.section`
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: calc(33.33% - 0.666rem) calc(33.33% - 0.666rem) calc(33.33% - 0.666rem);
     padding: 15rem 12vw;
+    grid-template-columns: calc(33.33% - 0.666rem) calc(33.33% - 0.666rem) calc(33.33% - 0.666rem);
     form {
       width: calc(76vw);
       button {

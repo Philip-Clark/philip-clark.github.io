@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 *{
-  font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
-  transition: background-color 1s ease-in-out;
   transition: color 1s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 1s ease-in-out;
 }
 img, figure{
   -webkit-user-drag: none;

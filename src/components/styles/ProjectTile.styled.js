@@ -1,28 +1,27 @@
 import styled from 'styled-components';
 
 export const StyledProjectTile = styled.section`
-  background-color: ${({ theme }) => theme.colors.background_light};
-  color: white;
   margin: 0;
-
+  color: white;
   text-align: left;
   line-height: 1.2rem;
   padding: 10rem 0rem;
+  background-color: ${({ theme }) => theme.colors.background_light};
 
   #aboveCircle {
-    position: relative;
     z-index: 10;
+    position: relative;
   }
   #circle {
-    position: absolute;
-    background-color: rgb(46, 46, 46, 0.2);
+    z-index: -1;
     width: 35rem;
+    height: 35rem;
     max-width: 90vw;
     max-height: 90vw;
-    height: 35rem;
-    transform: translate(10%, -60%) scale(0);
-    z-index: -1;
+    position: absolute;
     border-radius: 500rem;
+    background-color: rgb(46, 46, 46, 0.2);
+    transform: translate(10%, -60%) scale(0);
   }
   h1 {
     margin: 0;
@@ -36,14 +35,13 @@ export const StyledProjectTile = styled.section`
     color: ${({ theme }) => theme.colors.basic};
   }
   #button {
-    display: block;
-    border-radius: 0.3125rem;
-    color: ${({ theme }) => theme.colors.background_dark};
-    width: calc(100vw - 8rem);
-    /* 6 from the body and 2 from self = 8rem */
-    text-align: center;
-    text-decoration: none;
     padding: 1rem;
+    display: block;
+    text-align: center;
+    color: ${({ theme }) => theme.colors.background_dark};
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    width: calc(100vw - 8rem);
     background-color: ${({ theme }) => theme.colors.primary};
   }
   p {
@@ -51,8 +49,8 @@ export const StyledProjectTile = styled.section`
   }
 
   img {
-    width: calc(100vw - 6rem);
     margin-bottom: 3rem;
+    width: calc(100vw - 6rem);
   }
 
   @media (min-width: 600px) {

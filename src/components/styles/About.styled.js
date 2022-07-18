@@ -1,41 +1,39 @@
 import styled from 'styled-components';
 
 export const StyledAbout = styled.section`
-  background-color: ${({ theme }) => theme.colors.background_dark};
-  color: white;
   margin: 0;
+  color: white;
   text-align: left;
   padding: 8rem 3rem;
   line-height: 1.5rem;
+  background-color: ${({ theme }) => theme.colors.background_dark};
 
   #aboveCircle {
-    position: relative;
     z-index: 10;
+    position: relative;
   }
 
   h1 {
     margin: 0;
-    font-size: 4rem;
-    letter-spacing: 0.03rem;
-    line-height: 4rem;
     padding: 0;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: 0.03rem;
     transform: translate(0%, 110%);
-
     color: ${({ theme }) => theme.colors.secondary};
   }
   h2 {
     font-size: 2rem;
-    line-height: normal;
     margin-top: 0.5rem;
-
+    line-height: normal;
     transform: translate(0%, -150%);
     color: ${({ theme }) => theme.colors.secondary};
   }
 
   p {
+    opacity: 0%;
     font-size: 1rem;
     margin-top: 2rem;
-    opacity: 0%;
   }
 
   .mask {
@@ -44,15 +42,15 @@ export const StyledAbout = styled.section`
   }
 
   #circle {
-    position: absolute;
-    background-color: rgb(46, 46, 46, 0.2);
+    z-index: -1;
     width: 35rem;
+    height: 35rem;
     max-width: 90vw;
     max-height: 90vw;
-    height: 35rem;
-    z-index: -1;
+    position: absolute;
     transform: scale(0);
     border-radius: 500rem;
+    background-color: rgb(46, 46, 46, 0.2);
   }
 
   @media (min-width: 600px) {

@@ -24,7 +24,7 @@ export const StyledSkills = styled.section`
     @media (min-width: 1024px) {
       grid-template-columns: calc(33.33% - 0.666rem) calc(33.33% - 0.666rem) calc(33.33% - 0.666rem);
 
-      padding: 0rem 5vw;
+      padding: 0rem 12vw;
     }
     @media (min-width: 1440px) {
       padding: 0rem 20vw;

@@ -3,7 +3,6 @@ import React, { useRef, useState } from 'react';
 import { StyledCurve } from './styles/Curve.styled';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import MotionPathPlugin from 'gsap/MotionPathPlugin';
-import { theme } from './styles/theme';
 
 function Curve() {
   const [curve, setCurve] = useState('');

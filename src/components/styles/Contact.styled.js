@@ -13,7 +13,6 @@ export const StyledContact = styled.section`
   h2 {
     color: ${({ theme }) => theme.colors.basic};
     font-weight: 100;
-    transform: translate(0%, -150%);
   }
 
   #subtitle {
@@ -129,9 +128,9 @@ export const StyledContact = styled.section`
 
   @media (min-width: 1024px) {
     grid-template-columns: calc(33.33% - 0.666rem) calc(33.33% - 0.666rem) calc(33.33% - 0.666rem);
-    padding: 15rem 5vw;
+    padding: 15rem 12vw;
     form {
-      width: calc(90vw);
+      width: calc(76vw);
       button {
         width: 15rem;
         align-self: flex-end;

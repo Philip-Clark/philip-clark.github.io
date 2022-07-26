@@ -19,7 +19,7 @@ function Header() {
     gsap.to(title.current, { opacity: 0 });
     gsap.to(line.current, { scaleX: 0.1, scaleY: 0, transformOrigin: '50% 50%' });
 
-    var tl = gsap.timeline({ delay: 0.3 });
+    const tl = gsap.timeline({ delay: 0.3 });
     tl.to(line.current, {
       scaleY: 1,
       duration: 0.3,
@@ -42,7 +42,6 @@ function Header() {
       delay: 0.2,
       transformOrigin: '50% 63%',
     });
-    // tl.play();
   }, []);
 
   return (

@@ -36,9 +36,9 @@ function Contact() {
                 document.getElementById('message').value = '';
                 document.getElementById('ReCaptcha').reset();
               },
-              (err) => {
+              () => {
                 document.getElementById('confirmation').innerText =
-                  'Opps! Something went wrong, please try again.';
+                  'Oops! Something went wrong, please try again.';
               }
             );
         }}

@@ -9,7 +9,6 @@ function Curve() {
   let tempCurve = '';
   const path = useRef(null);
   const [curveLength, setCurveLength] = useState(10000000);
-  const [pathHeight, setPathHeight] = useState(0);
 
   function moveCircle() {
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -18,9 +17,7 @@ function Curve() {
     gsap.set('#circleSvgBlur2', { xPercent: -50, yPercent: -50 });
     gsap.set('#circleSvgBlur3', { xPercent: -50, yPercent: -50 });
 
-    var dir;
-
-    var action = gsap
+    gsap
       .timeline({
         defaults: { duration: 1, ease: 'none' },
         scrollTrigger: {
@@ -36,7 +33,7 @@ function Curve() {
         0
       );
 
-    var action2 = gsap
+    gsap
       .timeline({
         defaults: { duration: 1, ease: 'none' },
         scrollTrigger: {
@@ -51,7 +48,7 @@ function Curve() {
         { motionPath: { path: '#curve', align: '#curve', offsetX: 0, offsetY: 0 } },
         0
       );
-    var action3 = gsap
+    gsap
       .timeline({
         defaults: { duration: 1, ease: 'none' },
         scrollTrigger: {
@@ -66,7 +63,7 @@ function Curve() {
         { motionPath: { path: '#curve', align: '#curve', offsetX: 0, offsetY: 0 } },
         0
       );
-    var action4 = gsap
+    gsap
       .timeline({
         defaults: { duration: 1, ease: 'none' },
         scrollTrigger: {
@@ -101,11 +98,11 @@ function Curve() {
 
     // Draw the line through every given section
     idArray.forEach((element, index) => {
-      if (index != idArray.length - 1) {
+      if (index !== idArray.length - 1) {
         //
         // LEFT SIDED
         //
-        if (index % 2 != 0) {
+        if (index % 2 !== 0) {
           tempCurve += `l ${
             -element.offsetWidth + linePadding + linePadding + curveScale * 2
           } ${0} q ${-curveScale} ${0} ${-curveScale} ${curveScale}l ${0} ${
@@ -126,7 +123,7 @@ function Curve() {
         //
         // LEFT SIDED
         //
-        if (index % 2 != 0) {
+        if (index % 2 !== 0) {
           tempCurve += `l ${
             -element.offsetWidth + linePadding + linePadding + curveScale * 2
           } ${0} q ${-curveScale} ${0} ${-curveScale} ${curveScale}l ${0} ${
@@ -161,7 +158,7 @@ function Curve() {
       const tick = () => {
         savedCallback.current();
       };
-      if (delay !== null) {
+      if (delay != null) {
         let id = setTimeout(tick, delay);
         return () => clearTimeout(id);
       }
@@ -175,7 +172,6 @@ function Curve() {
   useTimeout(() => {
     setCurveLength(path.current.getTotalLength());
     console.log(path.current.getTotalLength());
-    setPathHeight(document.getElementById('curve').clientHeight);
     window.addEventListener(window.scroll, moveCircle());
   }, 1020);
 

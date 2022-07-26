@@ -21,6 +21,13 @@ function Skills() {
             to help others when I can. I love to learn and constantly look for better ways to do my
             work, but I understand that some things need to stay consistent. I love teaching others
             new things and helping people understand technologies.
+            <a
+              href="https://stackoverflow.com/users/17977603/philip-clark"
+              rel="noreferrer"
+              target="_blank"
+            >
+              (See me in action helping others)
+            </a>
           </p>
           <div className="mask">
             <h1 data-aos="in" id="hardSkills">

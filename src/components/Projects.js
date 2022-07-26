@@ -2,7 +2,7 @@ import { StyledProjects } from './styles/Projects.styled';
 import ProjectTile from './ProjectTile';
 import 'aos/dist/aos.css';
 
-function Projects(props) {
+function Projects() {
   return (
     <StyledProjects id="Projects" className="snap">
       <div className="Project snap" data-aos="fade-in" data-aos-delay="200" data-aos-offset="500">

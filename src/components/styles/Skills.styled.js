@@ -8,6 +8,11 @@ export const StyledSkills = styled.section`
   line-height: 1.5rem;
   background-color: ${({ theme }) => theme.colors.background_dark};
 
+  a {
+    color: ${({ theme }) => theme.colors.basic};
+    text-decoration: none;
+    border-bottom: 0.001rem solid ${({ theme }) => theme.colors.basic};
+  }
   #skillsList {
     gap: 1rem;
     display: grid;

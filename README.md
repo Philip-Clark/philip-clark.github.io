@@ -3,11 +3,11 @@
 <br>
 <br>
 
-My most recent portfolio. Made to display my skills in a effecient and stylistic manner.
+My most recent portfolio. Made to display my skills in a efficient and stylistic manner.
 <br>
 <br>
 
-# Visit : https://philip-clark.github.io/PhilipClarkPortfolio/
+# Visit : https://philip-clark.github.io/
 
 <br>
 

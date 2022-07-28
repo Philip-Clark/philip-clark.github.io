@@ -17,6 +17,7 @@ export const logFirebaseEvent = (message) => {
   const analytics = getAnalytics(app);
 
   logEvent(analytics, message);
+  console.log(message);
 };
 
 export default logFirebaseEvent;

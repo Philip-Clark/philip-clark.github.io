@@ -11,7 +11,6 @@ function ContactTile(props) {
         href={props.link}
         onClick={() => {
           logFirebaseEvent(`Link clicked: ${props.link}`);
-          console.log(`Link clicked: ${props.link}`);
         }}
         rel="noreferrer"
         target="_blank"

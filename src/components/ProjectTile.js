@@ -25,11 +25,10 @@ function ProjectTile(props) {
           </p>
           <a
             target="_blank"
-            referrerPolicy="no-referrer"
+            rel="noreferrer"
             href={props.link}
             onClick={() => {
               logFirebaseEvent(`Link clicked: ${props.link}`);
-              console.log(`Link clicked: ${props.link}`);
             }}
             id="button"
             data-aos="fade-up"

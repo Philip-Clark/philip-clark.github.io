@@ -1,6 +1,7 @@
 import { StyledSkills } from './styles/Skills.styled';
 import SkillTile from './SkillTile';
 import 'aos/dist/aos.css';
+import { logFirebaseEvent } from '../firebase/config';
 
 function Skills() {
   return (
@@ -25,6 +26,9 @@ function Skills() {
               href="https://stackoverflow.com/users/17977603/philip-clark"
               rel="noreferrer"
               target="_blank"
+              onClick={logFirebaseEvent(
+                `Link clicked: ${'https://stackoverflow.com/users/17977603/philip-clark'}`
+              )}
             >
               (See me in action helping others)
             </a>

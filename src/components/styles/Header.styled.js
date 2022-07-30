@@ -70,13 +70,15 @@ export const StyledHeader = styled.section`
     padding-top: 35vh;
     position: absolute;
     transform: translateX(-50%);
+    opacity: 0;
+    animation: svgInitialFade 0.2s forwards 0.35s;
   }
 
   #scroll {
     bottom: 3rem;
     position: absolute;
     transform: translate(-50%, 0px);
-    animation: scrollBounce 2s ease-in-out infinite;
+    animation: scrollBounce 2s ease-in-out 1s infinite;
   }
   @keyframes scrollBounce {
     0% {
@@ -95,7 +97,16 @@ export const StyledHeader = styled.section`
 
   .fadesIn {
     opacity: 0;
-    animation: fadeIn 0.5s ease-in-out 2.7s forwards;
+    animation: fadeIn 0.5s ease-in-out 3s forwards;
+  }
+
+  @keyframes svgInitialFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes fadeIn {

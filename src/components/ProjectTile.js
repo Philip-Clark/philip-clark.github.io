@@ -13,14 +13,14 @@ function ProjectTile(props) {
           height="auto"
         ></img>
         <div id="text">
-          <h1 data-aos="fade-up" data-aos-delay="500">
+          <h1 data-aos="fade-up" data-aos-delay="200">
             {props.title}
           </h1>
-          <figure id="circle" data-aos="circle" data-aos-delay="400" />
-          <h2 data-aos="fade-up" data-aos-delay="600">
+          <figure id="circle" data-aos="circle" data-aos-delay="200" />
+          <h2 data-aos="fade-up" data-aos-delay="200">
             {props.subtitle}
           </h2>
-          <p data-aos="fade-up" data-aos-delay="700">
+          <p data-aos="fade-up" data-aos-delay="200">
             {props.paragraph}
           </p>
           <a
@@ -32,7 +32,7 @@ function ProjectTile(props) {
             }}
             id="button"
             data-aos="fade-up"
-            data-aos-delay="800"
+            data-aos-delay="300"
           >
             View Project
           </a>

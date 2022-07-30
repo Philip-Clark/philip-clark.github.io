@@ -3,7 +3,7 @@ import 'aos/dist/aos.css';
 
 function SkillTile(props) {
   return (
-    <StyledSkillTile data-aos="TileUp" id="TileUp">
+    <StyledSkillTile data-aos-offset="-100" data-aos="TileUp" id="TileUp">
       <img
         src={`${process.env.PUBLIC_URL}/images/${props.img}`}
         alt={`${props.title} Icon`}

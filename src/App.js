@@ -10,12 +10,10 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import GlobalStyles from './components/styles/Global';
 import { theme } from './components/styles/theme';
-import { logFirebaseEvent } from './firebase/config';
 
 function App() {
   useEffect(() => {
     Aos.init({});
-    logFirebaseEvent('Site Loaded');
   }, []);
   return (
     <ThemeProvider theme={theme}>

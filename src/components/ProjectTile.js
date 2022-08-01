@@ -1,6 +1,5 @@
 import { StyledProjectTile } from './styles/ProjectTile.styled';
 import 'aos/dist/aos.css';
-import { logFirebaseEvent } from '../firebase/config';
 
 function ProjectTile(props) {
   return (
@@ -27,9 +26,6 @@ function ProjectTile(props) {
             target="_blank"
             rel="noreferrer"
             href={props.link}
-            onClick={() => {
-              logFirebaseEvent(`Link clicked: ${props.link}`);
-            }}
             id="button"
             data-aos="fade-up"
             data-aos-delay="300"

@@ -43,6 +43,14 @@ export const StyledProjectTile = styled.section`
     border-radius: 0.3125rem;
     width: calc(100vw - 8rem);
     background-color: ${({ theme }) => theme.colors.primary};
+    transition: all 0.05s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+    &:active {
+      transform: scale(0.9, 0.9);
+    }
   }
   p {
     margin: 3rem 0;

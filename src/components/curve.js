@@ -144,7 +144,6 @@ function Curve() {
     });
 
     setCurve(tempCurve);
-    console.log(curve);
   }
 
   const useTimeout = (callback, delay) => {
@@ -171,7 +170,6 @@ function Curve() {
 
   useTimeout(() => {
     setCurveLength(path.current.getTotalLength());
-    console.log(path.current.getTotalLength());
     window.addEventListener(window.scroll, moveCircle());
   }, 1020);
 

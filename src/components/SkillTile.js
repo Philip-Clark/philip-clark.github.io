@@ -2,6 +2,14 @@ import { StyledSkillTile } from './styles/SkillTile.styled';
 import 'aos/dist/aos.css';
 
 function SkillTile(props) {
+  const skillsArray = props.skills.split(', ').map((skill) => {
+    return (
+      <li className="skillItem" key={skill}>
+        {skill}
+      </li>
+    );
+  });
+
   return (
     <StyledSkillTile data-aos-offset="-100" data-aos="TileUp" id="TileUp">
       <img
@@ -11,8 +19,7 @@ function SkillTile(props) {
         height="auto"
       ></img>
       <h1>{props.title}</h1>
-      {/* <h3>{props.subtitle}</h3> */}
-      <p>{props.skills}</p>
+      <ul className="skillsList">{skillsArray}</ul>
     </StyledSkillTile>
   );
 }

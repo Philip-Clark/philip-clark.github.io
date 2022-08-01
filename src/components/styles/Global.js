@@ -1,6 +1,33 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.colors.secondary};
+  border-radius: 1000px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: ${({ theme }) => theme.colors.third};
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: ${({ theme }) => theme.colors.primary};
+}
+
+
 *{
   scroll-behavior: smooth;
   transition: color 1s ease-in-out;
@@ -20,6 +47,10 @@ img, figure{
 
 #root, body{
   overflow-x: hidden;
+}
+
+#root, body{
+  animation: restrictScroll 3s linear forwards 0s;
 }
 
 #svgWrapper{
@@ -43,11 +74,26 @@ h2{
 }
 p{
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 150%;
   letter-spacing: 0.1rem;
   color: ${({ theme }) => theme.colors.basic};
   
+}
+
+@keyframes restrictScroll {
+  0%{
+    height: 100vh;
+  overflow-y: hidden;
+  }
+  99%{
+    height: 100vh;
+  overflow-y: hidden;
+  }
+  100%{
+    height: auto;
+    overflow-y: visible;
+  }
 }
 
 

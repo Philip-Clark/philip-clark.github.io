@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-
+const gap = '8rem';
 export const StyledSkills = styled.section`
   margin: 0;
   text-align: left;
   overflow-x: hidden;
-  padding: 10rem 0rem;
   line-height: 1.5rem;
   background-color: ${({ theme }) => theme.colors.background_dark};
 
@@ -14,24 +13,15 @@ export const StyledSkills = styled.section`
     border-bottom: 0.001rem solid ${({ theme }) => theme.colors.basic};
   }
   #skillsList {
-    gap: 1rem;
+    gap: calc(${gap} / 2);
     display: grid;
-    padding: 0 3rem;
     margin-top: 3rem;
     margin-bottom: 10rem;
-    min-width: min-content;
-
-    @media (min-width: 600px) {
-      padding: 0rem 20vw;
-    }
 
     @media (min-width: 1024px) {
-      grid-template-columns: calc(33.33% - 0.666rem) calc(33.33% - 0.666rem) calc(33.33% - 0.666rem);
-
-      padding: 0rem 12vw;
-    }
-    @media (min-width: 1440px) {
-      padding: 0rem 20vw;
+      grid-template-columns: calc(33.33% - (${gap} / 3)) calc(33.33% - (${gap} / 3)) calc(
+          33.33% - (${gap} / 3)
+        );
     }
   }
 
@@ -59,7 +49,6 @@ export const StyledSkills = styled.section`
     width: fit-content;
   }
   #softSkills {
-    padding: 8rem 3rem 0rem;
     h1,
     #hardSkills {
       margin: 0;
@@ -71,9 +60,6 @@ export const StyledSkills = styled.section`
     p {
       margin-bottom: 15rem;
       opacity: 0%;
-    }
-    @media (min-width: 600px) {
-      padding: 8rem 20vw 0rem;
     }
   }
 
@@ -96,6 +82,19 @@ export const StyledSkills = styled.section`
   #TileUp {
     opacity: 0%;
     transform: translate(50%, 0%);
+  }
+
+  padding: 15rem 12vw;
+
+  @media (min-width: 600px) {
+    padding: 15rem 20vw;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 15rem 12vw;
+  }
+  @media (min-width: 1440px) {
+    padding: 15rem 20vw;
   }
 
   @keyframes circleIn {
@@ -134,6 +133,10 @@ export const StyledSkills = styled.section`
   }
 
   @keyframes TileUp {
+    from {
+      opacity: 0;
+      transform: translate(0%, -20%);
+    }
     to {
       opacity: 100%;
       transform: translate(0%, 0%);

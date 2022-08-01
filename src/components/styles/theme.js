@@ -3,10 +3,10 @@ export const theme = {
     primary: '#2E99B0',
     third: '#E3A01D',
     secondary: '#FF2E4C',
-    basic: '#D3D4D8',
-    background_pale: '#171a1e',
-    background_light: '#040506',
-    background_dark: '#171a1e',
+    basic: '#f3f6ff',
+    background_pale: '#000000',
+    background_light: '#20272c',
+    background_dark: '#000000',
   },
   fonts: {
     imports:

@@ -8,6 +8,7 @@ export const StyledHeader = styled.section`
   background-color: ${({ theme }) => theme.colors.background_light};
 
   #decorative {
+    display: none;
     bottom: 0;
     margin: 0;
     width: 100vw;
@@ -15,7 +16,6 @@ export const StyledHeader = styled.section`
     user-select: none;
     position: absolute;
     text-align: center;
-    color: rgb(151, 151, 151, 0.02);
   }
 
   #designRules {

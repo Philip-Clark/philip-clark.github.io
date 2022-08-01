@@ -22,10 +22,10 @@ function Skills() {
             work, but I understand that some things need to stay consistent. I love teaching others
             new things and helping people understand technologies.
             <a
+              id="button"
               href="https://stackoverflow.com/users/17977603/philip-clark"
               rel="noreferrer"
               target="_blank"
-              
             >
               (See me in action helping others)
             </a>
@@ -42,7 +42,9 @@ function Skills() {
         <SkillTile
           title={
             <span>
-              Front end <br></br> Development
+              Front end
+              <br></br>
+              Development
             </span>
           }
           subtitle="The visible parts of a project, Front end is my favorite"
@@ -52,7 +54,9 @@ function Skills() {
         <SkillTile
           title={
             <span>
-              Back end <br></br> Development
+              Back End
+              <br></br>
+              Development
             </span>
           }
           subtitle="The hidden parts of a project, back end is like magic"
@@ -62,7 +66,8 @@ function Skills() {
         <SkillTile
           title={
             <span>
-              Tools for <br></br> Development
+              Tools for<br></br>
+              Development
             </span>
           }
           subtitle="These are some of the other areas I have skill in"

@@ -16,20 +16,21 @@ export const StyledCurve = styled.div`
 
   #curve {
     animation: revealLine 1s 2.5s cubic-bezier(1, 0, 1, 0.63) forwards;
-    stroke: ${({ theme }) => theme.colors.basic};
+    stroke: #ffffff;
+    stroke-width: 2px;
   }
 
-  #circleSvg {
-    stroke: ${({ theme }) => theme.colors.basic};
-    fill: ${({ theme }) => theme.colors.basic};
+  #circleSvg,
+  #circleSvgBlur1,
+  #circleSvgBlur2,
+  #circleSvgBlur3 {
+    fill: #ffffff;
   }
 
   #circleSvgBlur1,
   #circleSvgBlur2,
   #circleSvgBlur3 {
     filter: blur(1px);
-    fill: ${({ theme }) => theme.colors.basic};
-    stroke: ${({ theme }) => theme.colors.basic};
   }
 
   #circleSvgBlur1 {

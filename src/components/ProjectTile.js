@@ -1,16 +1,16 @@
 import { StyledProjectTile } from './styles/ProjectTile.styled';
 import 'aos/dist/aos.css';
+import ImageLoader from './ImageLoader';
 
 function ProjectTile(props) {
   return (
     <StyledProjectTile>
       <div id="aboveCircle">
-        <img
+        <ImageLoader
+          placeholderSrc={`${process.env.PUBLIC_URL}/images/small_${props.img}`}
           src={`${process.env.PUBLIC_URL}/images/${props.img}`}
           alt="A project made by Philip Clark"
-          width="300px"
-          height="auto"
-        ></img>
+        ></ImageLoader>
         <div id="text">
           <h1 data-aos="fade-up" data-aos-delay="200">
             {props.title}

@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import { StyledCurve } from './styles/Curve.styled';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import MotionPathPlugin from 'gsap/MotionPathPlugin';
+import { useEffect } from 'react';
 
 function Curve() {
   const [curve, setCurve] = useState('');
@@ -12,11 +13,17 @@ function Curve() {
 
   function moveCircle() {
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+    setInitials();
+    assignCircleToLine();
+  }
+  function setInitials() {
     gsap.set('#circleSvg', { xPercent: -50, yPercent: -50 });
     gsap.set('#circleSvgBlur1', { xPercent: -50, yPercent: -50 });
     gsap.set('#circleSvgBlur2', { xPercent: -50, yPercent: -50 });
     gsap.set('#circleSvgBlur3', { xPercent: -50, yPercent: -50 });
+  }
 
+  function assignCircleToLine() {
     gsap
       .timeline({
         defaults: { duration: 1, ease: 'none' },
@@ -81,18 +88,22 @@ function Curve() {
   }
 
   function drawLine() {
+    //
+    // Get elements
+    // & set constants
+    //
     const header = document.getElementById('header');
     const about = document.getElementById('About');
     const projects = document.getElementById('Projects');
     const skills = document.getElementById('Skills');
     const contact = document.getElementById('Contact');
-
     const idArray = [about, projects, skills, contact];
     const curveScale = header.offsetWidth / 15;
     const linePadding = 100;
     const yOffset = 6;
 
-    tempCurve += `M ${header.offsetLeft + linePadding} ${header.offsetTop + 600} l ${0} ${
+    // first bit of the curve
+    tempCurve = `M ${header.offsetLeft + linePadding} ${header.offsetTop + 600} l ${0} ${
       header.offsetHeight - 600 - curveScale
     } q ${0} ${curveScale} ${curveScale} ${curveScale}`;
 
@@ -142,7 +153,6 @@ function Curve() {
         }
       }
     });
-
     setCurve(tempCurve);
   }
 
@@ -164,14 +174,20 @@ function Curve() {
     }, [delay]);
   };
 
-  useTimeout(() => {
-    drawLine();
-  }, 1000);
+  useTimeout(drawLine, 1000);
 
   useTimeout(() => {
     setCurveLength(path.current.getTotalLength());
     window.addEventListener(window.scroll, moveCircle());
   }, 1020);
+
+  useEffect(() => {
+    function resize() {
+      drawLine();
+      window.addEventListener(window.scroll, moveCircle());
+    }
+    window.addEventListener('resize', resize);
+  }, []);
 
   return (
     <StyledCurve>

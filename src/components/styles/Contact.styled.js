@@ -14,6 +14,10 @@ export const StyledContact = styled.section`
     font-weight: 100;
     color: ${({ theme }) => theme.colors.basic};
   }
+  a {
+    color: ${({ theme }) => theme.colors.secondary};
+    font-weight: 800;
+  }
 
   #subtitle {
     max-width: 25rem;

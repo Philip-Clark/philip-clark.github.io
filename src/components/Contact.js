@@ -34,11 +34,11 @@ function Contact() {
                   'Thank you! We received your email and will respond soon!';
                 document.getElementById('email').value = '';
                 document.getElementById('message').value = '';
-                document.getElementById('ReCaptcha').reset();
               },
               () => {
-                document.getElementById('confirmation').innerText =
-                  'Oops! Something went wrong, please try again.';
+                document.getElementById(
+                  'confirmation'
+                ).innerHTML = `Oops! Something went wrong, please try again or email me at: <a href="mailto:ContactPhilipClark@protonmail.com">ContactPhilipClark@protonmail.com</a>`;
               }
             );
         }}

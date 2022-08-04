@@ -1,15 +1,15 @@
-import gsap from 'gsap';
-import React, { useRef, useState } from 'react';
-import { StyledCurve } from './styles/Curve.styled';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import useResizeObserver from '@react-hook/resize-observer';
 import MotionPathPlugin from 'gsap/MotionPathPlugin';
-import { useEffect } from 'react';
+import { StyledCurve } from './styles/Curve.styled';
+import React, { useRef, useState } from 'react';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
 
 function Curve() {
+  const curveLength = 2500000;
   const [curve, setCurve] = useState('');
-  let tempCurve = '';
   const path = useRef(null);
-  const [curveLength, setCurveLength] = useState(10000000);
+  let tempCurve = '';
 
   function moveCircle() {
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -32,6 +32,7 @@ function Curve() {
           scrub: 2,
           start: 'top center',
           end: 'bottom +=85%',
+          invalidateOnRefresh: true,
         },
       })
       .to(
@@ -48,6 +49,7 @@ function Curve() {
           scrub: 2.1,
           start: 'top center',
           end: 'bottom +=85%',
+          invalidateOnRefresh: true,
         },
       })
       .to(
@@ -63,6 +65,7 @@ function Curve() {
           scrub: 2.2,
           start: 'top center',
           end: 'bottom +=85%',
+          invalidateOnRefresh: true,
         },
       })
       .to(
@@ -78,6 +81,7 @@ function Curve() {
           scrub: 2.3,
           start: 'top center',
           end: 'bottom +=85%',
+          invalidateOnRefresh: true,
         },
       })
       .to(
@@ -92,15 +96,16 @@ function Curve() {
     // Get elements
     // & set constants
     //
-    const header = document.getElementById('header');
+    const yOffset = 6;
+    const linePadding = 100;
     const about = document.getElementById('About');
-    const projects = document.getElementById('Projects');
+    const header = document.getElementById('header');
     const skills = document.getElementById('Skills');
     const contact = document.getElementById('Contact');
+    const projects = document.getElementById('Projects');
     const idArray = [about, projects, skills, contact];
+
     const curveScale = header.offsetWidth / 15;
-    const linePadding = 100;
-    const yOffset = 6;
 
     // first bit of the curve
     tempCurve = `M ${header.offsetLeft + linePadding} ${header.offsetTop + 600} l ${0} ${
@@ -156,6 +161,13 @@ function Curve() {
     setCurve(tempCurve);
   }
 
+  // Update the curve when the body changes size
+  useResizeObserver(document.body, () => {
+    drawLine();
+    console.log('re-drew line due to change in size of body');
+  });
+
+  // Declaration for the useTimeout function
   const useTimeout = (callback, delay) => {
     const savedCallback = React.useRef();
 
@@ -174,37 +186,34 @@ function Curve() {
     }, [delay]);
   };
 
-  useTimeout(drawLine, 1000);
-
+  // Slightly delayed rendering of the curve.
   useTimeout(() => {
-    setCurveLength(path.current.getTotalLength());
+    drawLine();
+  }, 100);
+  // delay the binding scrolling to moveCircle.
+  useTimeout(() => {
     window.addEventListener(window.scroll, moveCircle());
   }, 1020);
 
-  useEffect(() => {
-    function resize() {
-      drawLine();
-      window.addEventListener(window.scroll, moveCircle());
-    }
-    window.addEventListener('resize', resize);
-  }, []);
-
+  //
+  //
+  // RETURN
+  //
+  //
   return (
     <StyledCurve>
       <svg id="DecorativeCurve">
         <path
-          ref={path}
           d={curve}
           id="curve"
+          ref={path}
           fill="none"
           strokeWidth="0.5"
           strokeLinecap="round"
-          strokeDasharray={`${curveLength} ${curveLength}`}
           strokeDashoffset={`${curveLength}`}
+          strokeDasharray={`${curveLength} ${curveLength}`}
         />
-
         <circle cx={110} cy={600} r={10} id="circleSvg" strokeWidth="0" />
-
         <circle cx={110} cy={600} r={8} id="circleSvgBlur1" strokeWidth="0" />
         <circle cx={110} cy={600} r={8} id="circleSvgBlur2" strokeWidth="0" />
         <circle cx={110} cy={600} r={8} id="circleSvgBlur3" strokeWidth="0" />

@@ -18,9 +18,19 @@ function Projects() {
         <ProjectTile
           img="project2.png"
           title="Personal Project"
-          subtitle="I replaced my old portfolio, but not because it was bad!"
+          subtitle="I built a supper simple personal website!"
           paragraph="I designed and built this site as part of a college course. It is a basic HTML, CSS, and Javascript web resume that proficiently highlighted my skills and characteristics. The site included Javascript for scroll based animations and a few one shot animations. The entire site is fully responsive and very accessible. Despite how nice the site was, It needed to be better, so I replaced it with the site you are currently using."
           link="https://github.com/Philip-Clark/old_Porfolio"
+        />
+      </div>
+
+      <div className="Project snap" data-aos="fade-int" data-aos-offset="500">
+        <ProjectTile
+          img="project3.png"
+          title="Trip Planning App"
+          subtitle="I built a mobile app to help people plan trips!"
+          paragraph="This is an android native project that helps people plan trips and manage their schedule while they are on the trip. The desing is intentionaly simple so users can understand what is planned for the day. The app is built using React Native and has a wide range of features including: Importing csv's, displaying html event data, custom link previews, and a live time tracker to keep the trip on schedule."
+          link="https://github.com/Philip-Clark/trip-planner"
         />
       </div>
     </StyledProjects>

@@ -16,4 +16,4 @@ My most recent portfolio. Made to display my skills in a efficient and stylistic
 
 <br>
 
-![Group 72](https://user-images.githubusercontent.com/56705400/177423394-396b8494-31ad-43b8-9f52-cc122c779456.png)
+![7661c0c3ad6484258d7a3abe9b55c68d](https://user-images.githubusercontent.com/56705400/229685389-5267c5ba-b96f-405a-92fd-aa42cc8cc441.jpg)

@@ -12,9 +12,7 @@ export const StyledSkillTile = styled.section`
   background-color: ${({ theme }) => theme.colors.background_light};
   transition: transform 0.1s ease-out;
 
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 300;
+  h2 {
     justify-self: center;
     line-height: 1.5rem;
     color: ${({ theme }) => theme.colors.third};
@@ -24,15 +22,15 @@ export const StyledSkillTile = styled.section`
       letter-spacing: 0.01rem;
     }
   }
-  h3,
+
   h3 {
     font-weight: 100;
     line-height: 1rem;
     font-size: 0.875rem;
   }
   li {
-    font-size: 1rem;
-    font-weight: 100;
+    font-size: ${({ theme }) => theme.fonts.p.size};
+    font-weight: ${({ theme }) => theme.fonts.p.weight};
     color: ${({ theme }) => theme.colors.basic};
     line-height: 1.5rem;
     margin: 0;

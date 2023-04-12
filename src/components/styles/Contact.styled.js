@@ -10,17 +10,14 @@ export const StyledContact = styled.section`
     color: ${({ theme }) => theme.colors.secondary};
   }
 
-  h2 {
-    font-weight: 100;
-    color: ${({ theme }) => theme.colors.basic};
-  }
   a {
     color: ${({ theme }) => theme.colors.secondary};
     font-weight: 800;
   }
 
   #subtitle {
-    max-width: 25rem;
+    max-width: 30rem;
+    opacity: 0;
   }
   #buttonGroup {
     width: 100%;
@@ -50,7 +47,7 @@ export const StyledContact = styled.section`
     label {
       font-size: 1rem;
       margin-top: 1rem;
-      font-weight: 100;
+      font-weight: 200;
       margin-left: 0.5rem;
       color: ${({ theme }) => theme.colors.basic};
     }
@@ -80,7 +77,7 @@ export const StyledContact = styled.section`
       background-color: ${({ theme }) => theme.colors.secondary};
       transition: transform 0.05s ease-in-out;
       h3 {
-        font-weight: 400;
+        font-weight: 500;
         color: ${({ theme }) => theme.colors.background_light};
       }
       &:hover {

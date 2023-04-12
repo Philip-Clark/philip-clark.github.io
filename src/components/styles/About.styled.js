@@ -32,7 +32,6 @@ export const StyledAbout = styled.section`
 
   p {
     opacity: 0%;
-    font-size: 1rem;
     margin-top: 2rem;
   }
 

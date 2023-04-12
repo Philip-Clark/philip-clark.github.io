@@ -11,10 +11,10 @@ function Contact() {
         <h1 data-aos="in">Contact Form</h1>
       </div>
       <div className="mask">
-        <h2 id="subtitle" data-aos="in">
+        <p id="subtitle" data-aos="in">
           Wanna talk? Fill out the form with your email address and message, I’ll try to get back to
           you.
-        </h2>
+        </p>
       </div>
       <form
         id="form"
@@ -74,15 +74,15 @@ function Contact() {
         <ContactTile
           img="github.svg"
           h2="View My Github!"
-          para="I have my projects source code on GitHub, take a look and get a glimpse into how I develop things!"
+          para="I have my projects' source code on GitHub, take a look and get a glimpse into how I develop things!"
           link="https://github.com/Philip-Clark"
         />
 
         <ContactTile
-          img="indeed.svg"
-          h2="View My Resume on Indeed!"
-          para="If your interested in working with me, feel free to check out my Indeed resume!"
-          link="https://my.indeed.com/p/pr0sv1r"
+          img="so-note.svg"
+          h2="View My Resume!"
+          para="If your interested in working with me, feel free to check out my resume!"
+          link="Philip Clark Resume.pdf"
         />
 
         <ContactTile

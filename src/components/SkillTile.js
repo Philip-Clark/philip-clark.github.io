@@ -11,14 +11,14 @@ function SkillTile(props) {
   });
 
   return (
-    <StyledSkillTile data-aos-offset="-100" data-aos="TileUp" id="TileUp">
+    <StyledSkillTile data-aos-offset="0" data-aos="TileUp" id="TileUp">
       <img
         src={`${process.env.PUBLIC_URL}/images/${props.img}`}
         alt={`${props.title} Icon`}
         width="auto"
         height="auto"
       ></img>
-      <h1>{props.title}</h1>
+      <h2>{props.title}</h2>
       <ul className="skillsList">{skillsArray}</ul>
     </StyledSkillTile>
   );

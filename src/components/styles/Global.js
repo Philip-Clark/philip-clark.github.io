@@ -69,12 +69,13 @@ h1{
   letter-spacing:0.22rem;
 }
 h2{
-  font-size:1rem;
+  font-size:${({ theme }) => theme.fonts.h2.size};
+  font-weight: ${({ theme }) => theme.fonts.h2.weight};
   color: ${({ theme }) => theme.colors.primary};
 }
 p{
-  font-size: 1rem;
-  font-weight: 200;
+  font-size: ${({ theme }) => theme.fonts.p.size};
+  font-weight: ${({ theme }) => theme.fonts.p.weight};
   line-height: 150%;
   letter-spacing: 0.1rem;
   color: ${({ theme }) => theme.colors.basic};

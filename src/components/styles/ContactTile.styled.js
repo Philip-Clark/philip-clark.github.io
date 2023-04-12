@@ -14,13 +14,11 @@ export const StyledContactTile = styled.section`
     transform: translateY(-1rem);
   }
   h2 {
-    font-weight: 400;
     margin-top: 2.5rem;
     color: ${({ theme }) => theme.colors.secondary};
   }
   p {
     flex-grow: 1;
-    font-weight: 100;
     margin-bottom: 2rem;
   }
   a {

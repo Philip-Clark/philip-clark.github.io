@@ -15,7 +15,7 @@ function About() {
         </div>
         <p data-aos="inDelayed">
           I am a junior full-stack developer. I live out in the country about an hour south of
-          Louisville Kentucky. It was here that my brother taught me python and my love for
+          Louisville Kentucky. It was here that my brother taught me Python and my love for
           programming began. Now six years of programming later, I have an associate's in computer
           programming and I am pursuing a career in full-stack development. Even though I have
           always meddled in web development, only in the last two years has it been my focus. Before

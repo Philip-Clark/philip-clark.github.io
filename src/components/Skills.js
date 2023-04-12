@@ -42,13 +42,13 @@ function Skills() {
         <SkillTile
           title={
             <span>
-              Front end
+              Front End
               <br></br>
               Development
             </span>
           }
-          subtitle="The visible parts of a project, Front end is my favorite"
-          skills="Html, CSS, Tailwind.css, React.js, PHP, JavaScript"
+          subtitle="The visible parts of a project, front end is my favorite"
+          skills="Html, CSS, Tailwind.css, React.js,  JavaScript"
           img="FrontEnd.AVIF"
         />
         <SkillTile
@@ -60,7 +60,7 @@ function Skills() {
             </span>
           }
           subtitle="The hidden parts of a project, back end is like magic"
-          skills="Node.js, PHP, MySql, Python, Sql, JavaScript"
+          skills="Node.js, PHP, MySql, Python,  JavaScript"
           img="BackEnd.AVIF"
         />
         <SkillTile
@@ -71,7 +71,7 @@ function Skills() {
             </span>
           }
           subtitle="These are some of the other areas I have skill in"
-          skills="Github, Figma, VS Code, Windows Terminal, StackOverflow"
+          skills="Github, Figma, VS Code, Windows Terminal, Stack Overflow"
           img="OtherSkills.AVIF"
         />
       </div>

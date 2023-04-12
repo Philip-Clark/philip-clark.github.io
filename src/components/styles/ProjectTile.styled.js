@@ -34,6 +34,15 @@ export const StyledProjectTile = styled.section`
     font-weight: 900;
     color: ${({ theme }) => theme.colors.basic};
   }
+
+  .buttonRow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #button:not(:last-child) {
+    margin-right: 1rem;
+  }
   #button {
     padding: 1rem;
     display: block;
@@ -41,9 +50,28 @@ export const StyledProjectTile = styled.section`
     color: ${({ theme }) => theme.colors.background_dark};
     text-decoration: none;
     border-radius: 0.3125rem;
-    width: calc(100vw - 8rem);
+    width: 10rem;
     background-color: ${({ theme }) => theme.colors.primary};
     transition: all 0.05s ease-in-out;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+
+    p {
+      margin: 0;
+      font-weight: 500;
+      color: ${({ theme }) => theme.colors.background_light};
+    }
+    img {
+      margin: 0;
+      width: 2rem;
+    }
+    [src*='github.svg'] {
+      filter: invert(100);
+    }
 
     &:hover {
       transform: scale(1.1, 1.1);
@@ -64,16 +92,9 @@ export const StyledProjectTile = styled.section`
   @media (min-width: 600px) {
     img {
       width: calc(60vw);
-      margin-bottom: 3rem;
-    }
-    #button {
-      width: calc(60vw);
     }
   }
   @media (min-width: 1024px) {
-    #button {
-      width: 15rem;
-    }
   }
   @media (min-width: 1440px) {
     #aboveCircle {
@@ -87,11 +108,6 @@ export const StyledProjectTile = styled.section`
     img {
       margin: 5rem 5vw auto;
       width: 30vw;
-    }
-
-    #button {
-      width: fit-content;
-      padding: 1rem 3rem;
     }
   }
 

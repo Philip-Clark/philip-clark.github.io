@@ -22,16 +22,34 @@ function ProjectTile(props) {
           <p data-aos="fade-up" data-aos-delay="200">
             {props.paragraph}
           </p>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={props.link}
-            id="button"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            View Project
-          </a>
+          <div className="buttonRow">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={props.link}
+              id="button"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img src={`${process.env.PUBLIC_URL}/images/github.svg`} alt="Icon" />
+              <p>Code</p>
+            </a>
+
+            {props.liveLink != null && (
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={props.liveLink}
+                id="button"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <img src={`${process.env.PUBLIC_URL}/images/live.svg`} alt="Icon" />
+
+                <p>Live</p>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </StyledProjectTile>

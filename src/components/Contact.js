@@ -79,13 +79,6 @@ function Contact() {
         />
 
         <ContactTile
-          img="so-note.svg"
-          h2="View My Resume!"
-          para="If your interested in working with me, feel free to check out my resume!"
-          link="Philip Clark Resume.pdf"
-        />
-
-        <ContactTile
           img="linkedin.svg"
           h2="Let’s Connect on Linkedin!"
           para="Networking is a great tool, and I’d love to connect with you on Linkedin!"

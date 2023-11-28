@@ -8,10 +8,10 @@ function Projects() {
       <div className="Project snap" data-aos="fade-in" data-aos-delay="100" data-aos-offset="0">
         <ProjectTile
           img="project1.png"
-          title="Elliot’s Coffee"
-          subtitle="I made a Coffee E-store for College, and got an A+!"
-          paragraph="I designed and built a functional coffee e-store as my PHP term project. The design is inspired by retro advertisements, mixed with some west coast colors. I developed both the front end and back end of this site. The order page utilizes JavaScript to update the cart and display the number of items in the cart. The edit menu page allows an admin to change any items on the menu, but more importantly, it allows them to add new items to the menu. The site relies on a MySql database that holds the information for menu items and encrypted admin credentials."
-          link="https://github.com/Philip-Clark/Elliots_Coffee_Shop"
+          title="Creekside Barbell"
+          subtitle="I Built a client's dream site"
+          paragraph="I took this project from a dream to completion all while keeping my client in control of the final site. The site has a simple and sleek design that reflects the energy of the gym. It serves a dual purpose of bringing in new members and also providing a members only portal that can be used to inform existing members about gym news and equipment. The development cycle was very client friendly and I met frequently with the client to update them on the progress and to allow them to provide feedback and make suggestions. This allowed us to move forward steadily and produce the site the client wanted. The end result is a website that reflects the gyms brand and that can be managed by the owner."
+          liveLink="https://www.creeksidebarbell.com/"
         />
       </div>
       <div className="Project snap" data-aos="fade-in" data-aos-offset="0">

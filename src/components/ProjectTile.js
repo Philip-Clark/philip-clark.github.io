@@ -23,17 +23,19 @@ function ProjectTile(props) {
             {props.paragraph}
           </p>
           <div className="buttonRow">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={props.link}
-              id="button"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <img src={`${process.env.PUBLIC_URL}/images/github.svg`} alt="Icon" />
-              <p>Code</p>
-            </a>
+            {props.link != null && (
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={props.link}
+                id="button"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <img src={`${process.env.PUBLIC_URL}/images/github.svg`} alt="Icon" />
+                <p>Code</p>
+              </a>
+            )}
 
             {props.liveLink != null && (
               <a

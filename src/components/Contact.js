@@ -78,6 +78,16 @@ function Contact() {
           link="https://github.com/Philip-Clark"
         />
 
+<<<<<<< HEAD
+=======
+        {/* <ContactTile
+          img="indeed.svg"
+          h2="View My Resume on Indeed!"
+          para="If your interested in working with me, feel free to check out my Indeed resume!"
+          link=""
+        /> */}
+
+>>>>>>> 5dbff67fffb7be094f72fac539235a419e1eff46
         <ContactTile
           img="linkedin.svg"
           h2="Let’s Connect on Linkedin!"

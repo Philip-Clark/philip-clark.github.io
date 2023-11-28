@@ -17,6 +17,7 @@ function Projects() {
       <div className="Project snap" data-aos="fade-in" data-aos-offset="0">
         <ProjectTile
           img="project2.png"
+<<<<<<< HEAD
           title="Airbnb Clone"
           subtitle="I cloned the Airbnb site for practice"
           paragraph="This project is a response to the Final JavaScript project in The Odin Project open source bootcamp. I decided to go all in and make something I can be proud of. It's current state is decent, but I plan to continue refining it in the future. I would like to add the user login section, a mock reservation system and a few other features."
@@ -31,6 +32,22 @@ function Projects() {
           title="Trip Planning App"
           subtitle="I built a mobile app to help people plan trips!"
           paragraph="This is an android native project that helps people plan trips and manage their schedule while they are on the trip. The design is intentionally simple so users can understand what is planned for the day. The app is built using React Native and has a wide range of features including importing CSV's, displaying HTML event data, custom link previews, and a live time tracker to keep the trip on schedule."
+          link="https://github.com/Philip-Clark/trip-planner"
+=======
+          title="Personal Project"
+          subtitle="I built a super simple personal website!"
+          paragraph="I designed and built this site as part of a college course. It is a basic HTML, CSS, and Javascript web resume that proficiently highlighted my skills and characteristics. The site included Javascript for scroll based animations and a few one shot animations. The entire site is fully responsive and very accessible. Despite how nice the site was, It needed to be better, so I replaced it with the site you are currently using."
+          link="https://github.com/Philip-Clark/old_Porfolio"
+>>>>>>> 5dbff67fffb7be094f72fac539235a419e1eff46
+        />
+      </div>
+
+      <div className="Project snap" data-aos="fade-int" data-aos-offset="500">
+        <ProjectTile
+          img="project3.png"
+          title="Trip Planning App"
+          subtitle="I built a mobile app to help people plan trips!"
+          paragraph="This is an android native project that helps people plan trips and manage their schedule while they are on the trip. The design is intentionaly simple so users can understand what is planned for the day. The app is built using React Native and has a wide range of features including: Importing csv's, displaying html event data, custom link previews, and a live time tracker to keep the trip on schedule."
           link="https://github.com/Philip-Clark/trip-planner"
         />
       </div>
